@@ -1,0 +1,49 @@
+<div class="col-md-6 col-md-offset-3">
+    <h2>Register Form</h2>
+    <form name="form" ng-submit="vm.register()" role="form">
+    	
+			<!--    <label> Register as : </label>
+				<form>
+				<div class="form-group ">
+						<input type="radio" name="role" value="employee" ng-model="vm.user.role"> Employee 
+						<input type="radio" name="role" value="student" ng-model="vm.user.role"> Student 
+						<input type="radio" name="role" value="alumni" ng-model="vm.user.role"> Alumni
+				</div>
+				</form>-->
+            <div class="form-group" ng-class="{ 'has-error': form.id.$dirty && form.id.$error.required }">
+            <label for="id">ID</label>
+            <input type="text" name="id" id="id" class="form-control" ng-model="vm.user.id" required />
+            <span ng-show="form.id.$dirty && form.id.$error.required" class="help-block">ID is required</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.name.$dirty && form.name.$error.required }">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="Text1" class="form-control" ng-model="vm.user.name" required />
+            <span ng-show="form.name.$dirty && form.name.$error.required" class="help-block">name is required</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control" ng-model="vm.user.password" required />
+            <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+        </div>
+         <div class="form-group" ng-class="{ 'has-error': form.emailID.$dirty && form.emailID.$error.required }">
+            <label for="emailID">Email ID</label>
+            <input type="emailID" name="emailID" id="emailID" class="form-control" ng-model="vm.user.emailID" required />
+            <span ng-show="form.emailID.$dirty && form.emailID.$error.required" class="help-block">emailID is required</span>
+        </div>
+         <div class="form-group" ng-class="{ 'has-error': form.address.$dirty && form.address.$error.required }">
+            <label for="address">Address</label>
+            <input type="address" name="address" id="address" class="form-control" ng-model="vm.user.address" required />
+            <span ng-show="form.address.$dirty && form.address.$error.required" class="help-block">address is required</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.contactNumber.$dirty && form.contactNumber.$error.required }">
+            <label for="contactNumber">Contact Number</label>
+            <input type="contactNumber" name="contactNumber" id="contactNumber" class="form-control" ng-model="vm.user.contactNumber" required />
+            <span ng-show="form.contactNumber.$dirty && form.contactNumber.$error.required" class="help-block">contact number is required</span>
+        </div>
+        <div class="form-actions">
+            <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Register</button>
+            <img ng-if="vm.dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+            <a href="#/login" class="btn btn-link">Cancel</a>
+        </div>
+    </form>
+</div>
